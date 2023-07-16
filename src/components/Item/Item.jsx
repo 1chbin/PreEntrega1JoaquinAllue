@@ -1,4 +1,4 @@
-import { Link, Route, route, BrowserRouter } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Item = ({ id, titulo, img, precio, stock, talla, modelo, marca, category, color, material }) => {
     return (

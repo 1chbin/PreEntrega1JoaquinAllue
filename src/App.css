@@ -169,3 +169,88 @@ text-decoration: none;
   transition-duration: 300ms;
   cursor: pointer;
 }
+.auth-container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #000000, #1b1b1b, #2e2e2e, #444444, #5a5a5a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  .auth-modal {
+      background-color: rgb(255, 255, 255);
+      padding: 20px;
+      width: 500px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      justify-content: center;
+  
+}
+.tuCompra{
+  margin: 10px;
+  font-size: 40px;
+}
+.dato{
+  margin: 10px;
+  font-size: 20px;
+}
+.borrar{
+  background-color: rgb(27, 27, 27);
+  color: white  ;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+  font-size: 20px;
+}
+.borrar:hover{
+  cursor: pointer;
+}
+.Confirmacion{
+  text-decoration: none;
+  background-color: rgba(61, 139, 216, 0.746);
+  border: rgb(0, 68, 255) 2px solid;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  padding: 3px;
+  font-size: 20px;
+}
+.total{
+  font-size: 20px;
+  margin: 10px;
+}
+.confirmoProd{
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  border: #4d98ee94 solid 3px;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #000000;
+  width: 300px;
+}
+.confirmoProd:hover{
+  background-color: #087dfa39;
+}
+.volverInicio{
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  border: #4d98ee94 solid 3px;
+  border-radius: 6px;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #000000;
+  width: 300px;
+  text-decoration: none;
+  padding: 5px;
+}
+.volverInicio:hover{
+  background-color: #087dfa39;
+}
+.loginOption{
+  margin: 5px;
+  text-decoration: none;
+}

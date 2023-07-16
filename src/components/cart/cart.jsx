@@ -4,48 +4,41 @@ import { Link } from "react-router-dom"
 
 
 const Cart = () => {
-    const { cart, totalCompra, vaciarCarrito, eliminarDelCarrito } = useContext(CartContext)
+    const { cart, vaciarCarrito, removerItem, totalCarrito } = useContext(CartContext)
 
     if (cart.length === 0) {
         return (
             <div className="container my-5">
-                <h2>Tu carrito está vacío</h2>
+                <h2>No tienes productos agregados</h2>
                 <hr/>
-                <Link className="btn btn-primary" to="/">Ir a la tienda</Link>
+                <Link className="btn btn-primary" to="/">Volver</Link>
             </div>
         )
     }
 
     return (
         <div className="container my-5">
-
             <h2>Tu compra</h2>
             <hr/>
 
             {
-                cart.map((prod) => (
-                    <div key={prod.id}>
-                        <h4>{prod.nombre}</h4>
-                        <img src={prod.img} alt={prod.nombre}/>
-                        <p>Precio: ${prod.precio}</p>
-                        <p>Cantidad: {prod.cantidad}</p>
-
-                        <button 
-                            className="btn btn-danger"
-                            onClick={() => eliminarDelCarrito(prod.id)}
-                        >
-                        </button>
+                cart.map((item) => ( 
+                    <div key={item.id}>
+                        <h4>{item.name}</h4>
+                        <img src={item.img} alt="imagen"/>
+                        <div>
+                            <small>Cantidad: {item.cantidad} Precio un: {item.price}</small>
+                        </div>
+                        <p>Precio total: {item.price * item.cantidad}</p>
+                        <button onClick={() => removerItem(item.id)} className="btn btn-danger">X</button>
                         <hr/>
                     </div>
                 ))
             }
 
-            <div>
-                <h5>Total: ${totalCompra()}</h5>
-                <hr/>
-                <button onClick={vaciarCarrito} className="btn btn-danger">Vaciar carrito</button>
-                <Link className="btn btn-success mx-2" to="/checkout">Terminar mi compra</Link>
-            </div>
+            <h3>TOTAL: {totalCarrito()}</h3>
+            <button onClick={vaciarCarrito} className="btn btn-danger m-2">Vaciar carrito</button>
+            <Link to="/checkout" className="btn btn-success m-2">Terminar mi compra</Link>
         </div>
     )
 }
