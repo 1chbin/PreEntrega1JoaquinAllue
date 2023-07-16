@@ -20,17 +20,7 @@ const ItemListContainer = ({greeting}) => {
                 console.error(error)
             })
     }, [categoryId])
-
-    // useEffect(() => { 
-    // getProducts()
-    //     .then (response => {
-    //         setProducts(response)
-    //     })
-    //     .catch (error => {
-    //         console.error(error)
-    //     })
-    // }, [])
-
+    
     return (
         <>¿<div className="container2">
             <h1 className="texto">Bienvenidos a mi eCommerce</h1>

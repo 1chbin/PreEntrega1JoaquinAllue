@@ -10,9 +10,9 @@ const NavBar = () => {
                 </Link>
                 <div className="container1">
                     <Link id="button" to={`/category/Zapatillas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} >Zapatillas</Link>
-                    <Link id="button" to={`/Campera`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} >Camperas</Link>
-                    <Link id="button" to={`/Buzo`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} >Buzos</Link>
-                    <Link id="button" to={`/Pantalon`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} >Pantalones</Link>
+                    <Link id="button" to={`/category/Campera`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} >Camperas</Link>
+                    <Link id="button" to={`/category/Buzo`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} >Buzos</Link>
+                    <Link id="button" to={`/category/Pantalon`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} >Pantalones</Link>
 
                     {/* <button className="button">Inicio</button>
                     <button className="button">Buzos</button>

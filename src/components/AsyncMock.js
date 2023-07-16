@@ -130,7 +130,7 @@ const products = [
         "stock": 13
     },
     {
-        "img": "https://essential.vteximg.com.br/arquivos/ids/437436-1000-1000/302-0086_3.jpg?v=637587712196900000",
+        "img": "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw3655fd61/products/NI_CT8990-499/NI_CT8990-499-1.JPG",
         "titulo": "Buzo Nike",
         "id": '11',
         "category": "Buzo",
@@ -195,7 +195,7 @@ const products = [
         "stock": 5
     },
     {
-        "img": "https://maspormenos.net/45152-thickbox/pepe-jeans-pantalon-vaquero-spike-denim-medium-blue-used-azul-medio-hombre.jpg",
+        "img": "https://maspormenos.net/45149-large_default/pepe-jeans-pantalon-vaquero-spike-denim-dark-used-azul-oscuro-hombre.jpg",
         "titulo": "Pantalon Zara",
         "id": '16',
         "category": "Pantalon",
@@ -267,7 +267,7 @@ export const getProductsById = (productId) => {
 export const getProductsByCategory = (productCategory) => {
     return new Promise ((resolve) => {
         setTimeout(() => {
-            resolve(products.find(prod => prod.category === productCategory))
+            resolve(products.filter(prod => prod.category === productCategory))
         }, 5000)
     })
 }
